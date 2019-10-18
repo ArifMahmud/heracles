@@ -10,12 +10,12 @@ Jmeter has been as performance testing tool.
 
 ### How to run application and check the test case
 1. After cloning the project, go to the directory `".\BE`
-2. Run command "npm instal" and then "npm run start"
+2. Run command `npm install` and then `npm run start`
 3. Now go to the directory `".\fe`
-4. Run command "npm instal" and then "npm run start"
+4. Run command `npm install` and then `npm run start`
 5. Now frontend and backend both application is running.
-6. To run test for backend application, go to the directory `".\BE` and run command "npm run test"
-7. To run test for frontend application, go to the directory `".\fe` and run command "npm run test"
+6. To run test for backend application, go to the directory `".\BE` and run command `npm run test`
+7. To run test for frontend application, go to the directory `".\fe` and run command `npm run test`
 
 ### Performance Test
 1. I have made a folder in this repository named "Performance Test" and a jmx file named "Pleo Test.jmx" and a csv file named "data.csv". Please check those files.
