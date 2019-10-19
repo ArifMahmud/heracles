@@ -1,5 +1,7 @@
 # js-selenium-mocha
 
+[![CircleCI](https://circleci.com/gh/ArifMahmud/heracles.svg?style=svg)](https://circleci.com/gh/ArifMahmud/heracles)
+
 I have used javascript for both backend and frontend application. Mocha framework has been used for performing test over fronend and backend.
 Jmeter has been as performance testing tool.
 
