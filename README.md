@@ -1,48 +1,30 @@
-<img src="https://upload.wikimedia.org/wikipedia/commons/4/48/Twelve_Labours_Altemps_Inv8642.jpg" height="300px"/>
+# js-selenium-mocha
 
-# Heracles: Pleo's Test Engineer Challenge
+[![CircleCI](https://circleci.com/gh/ArifMahmud/heracles.svg?style=svg)](https://circleci.com/gh/ArifMahmud/heracles)
 
-We're really happy that you're considering to join us! Here's a challenge that will help us understand your skills and serve as a starting discussion point for the interview.
+I have used javascript for both backend and frontend application. Mocha framework has been used for performing test over fronend and backend.
+Jmeter has been as performance testing tool.
 
-We're not expecting that everything will be done perfectly as we value your time. You're encouraged to point out possible improvements in your solution and we will dicuss them during the interview.
+# Prerequisites
+* JDK `8` or higher for Jmeter
+* Apache Jmeter (Download Link: https://jmeter.apache.org/download_jmeter.cgi)
+* Node.js (Download Link: https://nodejs.org/en/)
 
-## The challenge: Money Formatting
+### How to run application and check the test case
+1. After cloning the project, go to the directory `".\BE"`
+2. Run command `npm install` and then `npm run start`
+3. Now go to the directory `".\fe"`
+4. Run command `npm install` and then `npm run start`
+5. Now frontend and backend both application is running.
+6. To run test for backend application, go to the directory `".\BE"` and run command `npm run test`
+7. To run test for frontend application, go to the directory `".\fe"` and run command `npm run test`
 
-Given an amount of money as a number, format it as a string. Add associated tests for the functionality and for the user interface. 
-
-```js
-formatMoney(2310000.159897); // '2 310 000.16'
-formatMoney(1600); // '1 600.00'
-```
-
-This needs to be a "fully working application" (you choose the format: web, cli, backend-frontend, mobile app, ...)
-
-*eg: A simple HTML page with an input box*
-
-## Our evaluation criteria:
-
-- How did your structure your code? (*eg: is it structured in a testable way?*)
-- What did you test? (*eg: functionality, performance, etc.*) at which level? (*eg: unit, integration, UI, etc.*)
-- Which testing technique did you use? why?
-- We also care a little about the functionality itself
-
-## What we won't really care: 
-
-- If your UI looking great, 0 line of CSS is quite enough CSS
-- You use the latest JS framework of the day
-- The programming language (We write a lot of Kotlin & Typescript at Pleo, just in case you want to show off your skills!)
-
-## What would be awesome:
-
-- You use some nice testing techniques, fuzz testing, mutation testing, ... (even if they don't make sense here they'll probably do in your day to day job)
-- You handle some stuff to test that we are not even aware of 
-  - *eg: You handle funky unicode strings (eg: [big list of naughty strings](https://github.com/minimaxir/big-list-of-naughty-strings))*
-- You show us how you run your tests in CI/CD
-  
-## Instructions:
-
-Fork this repo with your solution. We want to see your progression through commits (don’t commit the entire solution in 1 step) and don't forget to create a `README.md` to explain your thought process and also provide instructions on how to run the tests.
-
-Please let us know how long the challenge takes you. We're not looking for how speedy or lengthy you are. It's just really to give us a clearer idea of what you've produced in the time you decided to take. Feel free to go as big or as small as you want.
-
-Happy testing! 🚀
+### Performance Test
+1. I have made a folder in this repository named "Performance Test" and a jmx file named "Pleo Test.jmx" and a csv file named "data.csv". Please check those files.
+2. After downloading Apache Jmeter, go to .\bin directory and run "jmeter.bat file". Jmeter UI will be opened.
+3. Import "Pleo Test.jmx" file in Jmeter.
+4. Put "data.csv" file in .\bin directory.
+5. Now click run from Jmeter UI.
+6. You can configure the thread number for performance test. I have put total 10 data in csv file. If you want to make thread number 50/100 then
+just put 50/100 data in csv file and make the Jmeter thread number 50/100 from Jmeter UI.
+7. After running the test from Jmeter UI, you can view a details report in "Summary Report" from Jmeter UI
