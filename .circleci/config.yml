@@ -1,0 +1,26 @@
+version: 2.1
+jobs:
+  build:
+    working_directory: ~/app
+    docker:
+      - image: circleci/node:10.16.3 
+    steps:
+      - checkout
+      - run:
+          name: update-npm
+          command: sudo npm install -g npm@latest
+      - run:
+          name: install-npm-BE
+          command: |
+            cd BE
+            npm install
+      - run: # run tests
+          name: test-BE
+          command: |
+            cd BE
+            npm run test
+      - run:
+          name: install-npm-FE
+          command: |
+            cd fe
+            npm install
