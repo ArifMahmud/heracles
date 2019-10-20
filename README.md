@@ -28,3 +28,22 @@ Jmeter has been as performance testing tool.
 6. You can configure the thread number for performance test. I have put total 10 data in csv file. If you want to make thread number 50/100 then
 just put 50/100 data in csv file and make the Jmeter thread number 50/100 from Jmeter UI.
 7. After running the test from Jmeter UI, you can view a details report in "Summary Report" from Jmeter UI
+
+### CI pipeline setup
+* The CircleCI pipeline configuration can be found at /heracles/.circleci/config.yml
+* You can also integrate performance testing with Jenkins tool by following my article https://www.linkedin.com/feed/update/urn:li:activity:6554023974714597376
+
+### Test Types and Thinking
+1. At first drafted a sudo algorithm which covers all cases related to the task
+2. Select language and test framework
+3. Project is structure as Backend (Folder: BE) and Frontend(Folder: fe)
+4. Tests is performed seperately for BE and fe
+5. Functionality has been put as a json API which helps to mobilize performance test script
+6. Unit testing is performed for BE and UI testing is performed for fe and performance test is performed for the project
+7. Draw out all corner cases and implement those in BE
+8. Integrate with CircleCI pipeline
+
+### Further Improvement
+1. Json API could be removed as it put extra payload to project
+2. POM structure could be followed for UI testing
+3. log4j could be integrated for a better log viewing option
