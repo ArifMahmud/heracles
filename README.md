@@ -47,3 +47,5 @@ just put 50/100 data in csv file and make the Jmeter thread number 50/100 from J
 1. Json API could be removed as it put extra payload to project
 2. POM structure could be followed for UI testing
 3. log4j could be integrated for a better log viewing option
+
+* I have worked for 17+ hours for this task
