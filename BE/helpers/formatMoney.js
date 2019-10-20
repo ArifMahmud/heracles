@@ -95,6 +95,31 @@ const isZero = (val) => {
   return true;
 }
 
+const zeroBeforeDot = (value) => {
+  let ind = 0, dot = 0;
+  for (let i = 0; i < value.length; i += 1) {
+    if (value[i] === '.') {
+      ind = i - 1;
+      dot = i;
+      break;
+    }
+  } 
+
+  let flg = 1;
+  while (ind--) {
+    if (value[ind] !== '0' && value[ind] !== ' ') {
+      console.log('TCL: zeroBeforeDot -> value[ind]', value[ind]);
+      flg = 0;
+      break;
+    }
+  }
+  console.log('TCL: zeroBeforeDot -> flg', flg);
+  if (flg) {
+    value = "0" + value.slice(dot);
+  }
+  return value;
+}
+
 const formatMoney = (val) => {
   if (isInvalidNumber(val)) return 'Invalid Number';
 
@@ -105,6 +130,7 @@ const formatMoney = (val) => {
   value = formatWithSpace(value);
   // console.log('TCL: formatMoney3 -> value', value);
   if (isZero(value)) value = "0.00";
+  value = zeroBeforeDot(value);
 
   return value;
 }

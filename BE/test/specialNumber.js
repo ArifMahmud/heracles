@@ -2,6 +2,9 @@ const assert = require('assert');
 const { formatMoney } = require('../helpers/formatMoney');
 
 describe('Special Number', function() {
+  it('should return 0.13 when the number is 0000000.1267', function() {
+    assert.equal(formatMoney("0000000.1267"), "0.13")
+  })
   it('should return 0.00 when the number is -0.0', function() {
     assert.equal(formatMoney("-0.0"), "0.00")
   })
